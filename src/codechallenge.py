@@ -27,6 +27,6 @@ for kod in landic:
   for i in range(len(scb_valdeltagande)):
     if scb_valdeltagande[i]['key'][0] == kod:
       landata[landic[kod]][scb_valdeltagande[i]['key'][1]] = \
-      float(scb_valdeltagande[i]['values'][0])
+      float("0.0") if scb_valdeltagande[i]['values'][0]==".." else float(scb_valdeltagande[i]['values'][0])
 
 print (landata)
